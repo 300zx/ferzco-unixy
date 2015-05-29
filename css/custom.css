@@ -1,0 +1,165 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+body {
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: #2E2E2E;
+    height: 800px;
+}
+
+h1 {
+    color: white;
+}
+
+.main-view-container {
+    height: 700px;
+}
+
+.terminal-container {
+    background-color: #2e2e2e;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    box-shadow: 6px 6px 5px black;
+    padding: 0;
+}
+
+#first-terminal {
+    height: 450px;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+#second-terminal {
+    height: 200px;
+    width: 75%;
+    margin-top: 30px;
+    margin-left: 125px;
+}
+
+.sidebar {
+    height: 700px;
+    padding-top: 25%;
+    padding-left: 100px;
+}
+
+.widget {
+    margin: 10px;
+}
+
+#widget-one {
+    margin-left: 70px;
+}
+
+#widget-two {
+    margin-top: 30px;
+}
+
+#widget-three {
+    margin-top: 75%;
+}
+
+.terminal-body p {
+    padding-top: 7px;
+    margin: 5px;
+    color: white;
+}
+
+.cursor {
+    float: left;
+    margin: 5px;
+    height: 20px;
+    width: 100px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #848658;
+}
+
+.time-stamp {
+    margin: 0 auto;
+    display: table;
+    color: white;
+}
+
+.terminal-title {
+    height: 30px;
+    background: linear-gradient(90deg, #932E38, #DE5047 25%, #C79340);
+}
+
+.post-title {
+    color: #2E2E2E;
+    margin: 0 auto;
+    padding-top: 5px;
+    display: table;
+}
+
+/* Clock */
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    margin-top: -45px;
+    margin-left: -175px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.clock span {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+}
+
+.clock span:nth-child(2),
+.clock span:nth-child(4) {
+    border-right: 1px solid #852B3C;
+}
+
+.clock span:before,
+.clock span:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+    transition: transform .75s;
+}
+
+.clock span:before {
+    content: attr(data-old);
+    z-index: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.clock .flip:before {
+    transform: translate3d(0, 102.5%, 0);
+}
+
+.clock span:after {
+    content: attr(data-now);
+    z-index: 2;
+    transform: translate3d(0, -102.5%, 0);
+}
+
+.clock .flip:after {
+    transform: translate3d(0, 0, 0);
+}
+
+.clock span {
+    font: 300 70px/1 'Lato', sans-serif;
+    color: #C79340;
+}
+
+/* Weather */
+section h1 {
+    font-size: 2em;
+    line-height: 1em;
+}
+
+section p {
+    color: white;
+}
